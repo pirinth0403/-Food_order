@@ -18,17 +18,6 @@
             ?>
 
 
-
-
-
-
-
-
-
-
-
-
-
             <form action="" method="post">
                 <table class="tbl-30"> 
                     <tr>
@@ -97,7 +86,7 @@
                  // Data Inserted
                 //echo "Data Inserted";
                 // Create a Session Variable to Display Message 
-                $_SESSION['add'] = "Admin Added Sucessfully";
+                $_SESSION['add'] = "<div class='success'>Admin Added Sucessfully </div>";
                 //Redirect Page to Manage admin 
                 header("location:".SITEURL.'admin/manage-admin.php');
              }
@@ -105,7 +94,7 @@
                  // Failed to insert data
                  //echo "fail to Insert data"; 
                  // Create a Session Variable to Display Message 
-                 $_SESSION['add'] = "Failed toAdd Admin ";
+                 $_SESSION['add'] = "<div class='error'>Failed toAdd Admin </div>";
                 //Redirect Page to add admin 
                 header("location:".SITEURL.'admin/add-admin.php');
              }

@@ -27,7 +27,7 @@
 
             <div class = "col-4 text-center">
                 <h1>5</h1>
-                <br>
+                <br> 
                 categories 
             </div>  
 
@@ -37,4 +37,4 @@
         </div> 
         <!--Menu content Section ends --> 
 
-         <?php include('partials/footer.php') ?> 
+         <?php include('partials/footer.php') ?>  

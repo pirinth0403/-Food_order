@@ -10,12 +10,44 @@
             </br>  </br>  
 
 
-            <?php
+            <?php 
+                // Add method
                 if(isset($_SESSION['add'])) 
                 {
-                    echo $_SESSION['add']; 
-                    unset($_SESSION['add']); 
+                    echo $_SESSION['add']; // Displaying Session Message
+                    unset($_SESSION['add']); // Removing Session Message 
                 }
+                // delete method
+                if(isset($_SESSION['delete'])) 
+                {
+                    echo $_SESSION['delete']; 
+                    unset($_SESSION['delete']); 
+                } 
+                //Update method
+                if(isset($_SESSION['update'])) 
+                {
+                    echo $_SESSION['update']; 
+                    unset($_SESSION['update']); 
+                } 
+                //1. Update Password 
+                if(isset($_SESSION['user-not-found'])) 
+                {
+                    echo $_SESSION['user-not-found']; 
+                    unset($_SESSION['user-not-found']); 
+                } 
+                // pwd change success msg 
+                if(isset($_SESSION['changed-pwd'])) 
+                {
+                    echo $_SESSION['changed-pwd']; 
+                    unset($_SESSION['changed-pwd']); 
+                } 
+
+                //2. Update Password
+                 if(isset($_SESSION['pwd-not-match'])) 
+                 {
+                     echo $_SESSION['pwd-not-match']; 
+                     unset($_SESSION['pwd-not-match']); 
+                 } 
             
             
             ?> 
@@ -77,8 +109,9 @@
                                         <td><?php echo $full_Name;?> </td> 
                                         <td><?php echo $username;?></td>  
                                         <td>  
-                                            <a href="#" class="btn-secondary"> Upadate admin </a>
-                                            <a href="#" class="btn-danger"> Delete  admin </a> 
+                                            <a href="<?php echo SITEURL;?>admin/update-password.php?id=<?php echo $id;?>" class="btn-primary">Change password</a> 
+                                            <a href="<?php echo SITEURL;?>admin/update-admin.php?id=<?php echo $id;?>" class="btn-secondary"> Upadate admin </a> 
+                                            <a href="<?php echo SITEURL;?>admin/delete-admin.php?id=<?php echo $id;?>" class="btn-danger"> Delete  admin </a> 
                                         </td> 
                                         </tr> 
 

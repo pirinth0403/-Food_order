@@ -76,7 +76,14 @@
     background-color:#ff4757; 
     
 }
+.success{ 
+    color:#341f97;
 
+}
+.error{ 
+    color:#ff6348;
+
+}
 
 
 
